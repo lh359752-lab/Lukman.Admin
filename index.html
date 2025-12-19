@@ -149,6 +149,63 @@ footer {
     .hero h1 { font-size: 42px; }
     .hero h2 { font-size: 28px; }
 }
+/* CONTENT GRID */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 30px;
+}
+
+.content-card {
+    background: var(--card);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    border: 1px solid #e5e7eb;
+}
+
+.content-card img {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.content-info h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.content-info p {
+    margin: 0 0 15px;
+    font-size: 14px;
+    color: var(--subtext);
+}
+
+.content-info a {
+    color: #b91c1c;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.content-info a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE CARD */
+@media(max-width: 600px) {
+    .content-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-card img {
+        width: 100%;
+        height: auto;
+    }
+}
 </style>
 </head>
 
@@ -204,7 +261,25 @@ footer {
         <li>Arsip Digital</li>
     </ul>
 </section>
+<!-- DIGITAL CONTENT -->
+<section id="content">
+    <h3 class="section-title">Digital Content</h3>
 
+    <div class="content-grid">
+
+        <div class="content-card">
+            <img src="https://via.placeholder.com/300x400" alt="">
+            <div class="content-info">
+                <h4>KISAH ATTILLA: Si Cambuk Tuhan, Sangar Dimedan Perang Tumbang Di Kasur(2025)</h4>
+                <p>
+                    Tonton/download video sejarah dengan latar AI yang menarik.
+                </p>
+                <a href="https://youtube.com/shorts/j_Rq4JSmtdU?si=LndtgPKDte645jpA" target="_blank">
+                    Tonton Sekarang ↗
+                </a>
+            </div>
+        </div>      
+</section>
 <!-- CONTACT -->
 <section id="contact" class="contact">
     <h3 class="section-title">Contact</h3>
@@ -225,4 +300,5 @@ footer {
 </body>
 
 </html>
+
 
