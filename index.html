@@ -206,6 +206,13 @@ footer {
         height: auto;
     }
 }
+.game-box {
+    background: var(--card);
+    border: 1px solid #e5e7eb;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+}
 </style>
 </head>
 
@@ -261,7 +268,33 @@ footer {
         <li>Arsip Digital</li>
     </ul>
 </section>
-<!-- DIGITAL CONTENT -->
+<!-- ADMIN DATA GAME -->
+<section id="admin-game">
+    <h3 class="section-title">Admin Data Accuracy Test</h3>
+    <p style="color:var(--subtext); max-width:600px">
+        Simulasi ringan pekerjaan admin: periksa data di bawah
+        dan tentukan apakah data tersebut VALID atau SALAH.
+    </p>
+
+    <div class="game-box">
+        <h4 id="question"></h4>
+
+        <div style="margin:20px 0">
+            <button class="btn" onclick="answer(true)">VALID</button>
+            <button class="btn" onclick="answer(false)" style="margin-left:10px">
+                SALAH
+            </button>
+        </div>
+
+        <p>Skor: <strong><span id="adminScore">0</span></strong></p>
+        <p id="feedback" style="color:var(--accent)"></p>
+
+        <button onclick="nextQuestion()" class="btn" style="margin-top:15px">
+            Soal Berikutnya
+        </button>
+    </div>
+</section>
+	<!-- DIGITAL CONTENT -->
 <section id="content">
     <h3 class="section-title">Digital Content</h3>
 
@@ -296,9 +329,62 @@ footer {
 </footer>
 
 </div>
+<script>
+const questions = [
+    {
+        text: "Tanggal laporan: 31 Februari 2024",
+        correct: false
+    },
+    {
+        text: "Nomor invoice: INV-2025-0045",
+        correct: true
+    },
+    {
+        text: "Email: admin@perusahaan",
+        correct: false
+    },
+    {
+        text: "Total pembayaran: Rp 1.500.000",
+        correct: true
+    }
+];
 
+let current = 0;
+let score = 0;
+
+function loadQuestion() {
+    document.getElementById("question").textContent =
+        questions[current].text;
+    document.getElementById("feedback").textContent = "";
+}
+
+function answer(userAnswer) {
+    if (userAnswer === questions[current].correct) {
+        score++;
+        document.getElementById("feedback").textContent = "✔ Benar";
+    } else {
+        document.getElementById("feedback").textContent = "✖ Salah";
+    }
+
+    document.getElementById("adminScore").textContent = score;
+}
+
+function nextQuestion() {
+    current++;
+    if (current >= questions.length) {
+        alert("Tes selesai! Skor akhir: " + score);
+        current = 0;
+        score = 0;
+        document.getElementById("adminScore").textContent = score;
+    }
+    loadQuestion();
+}
+
+loadQuestion();
+</script>
 </body>
 
 </html>
+
 
 
