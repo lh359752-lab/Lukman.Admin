@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lukmanul Hakim | Admin Profesional</title>
-<meta name="description" content="CV Online Lukmanul Hakim — Admin profesional berpengalaman dalam data entry, dokumentasi, dan administrasi digital.">
+<title>Lukmanul Hakim | Admin </title>
+<meta name="description" content="CV Online Lukmanul Hakim — Admin  berpengalaman dalam data entry, dokumentasi, dan administrasi digital.">
 <meta name="keywords" content="Admin, Data Entry, Administrasi, CV Admin, Lukmanul Hakim">
 
 <style>
@@ -129,6 +129,51 @@ footer{
   .hero-photo img{width:200px}
   .hero-text h1{font-size:36px}
 }
+/* YOUTUBE BACKGROUND CARD */
+.yt-card{
+  position: relative;
+  height: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  border: 1px solid #e5e7eb;
+}
+
+.yt-overlay{
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.2)
+  );
+  color: #fff;
+}
+
+.yt-overlay h4{
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.yt-overlay p{
+  margin: 0 0 12px;
+  font-size: 14px;
+  opacity: .9;
+}
+
+.yt-overlay a{
+  color: #facc15;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.yt-overlay a:hover{
+  text-decoration: underline;
+}
 </style>
 </head>
 
@@ -141,7 +186,7 @@ footer{
   <div class="hero-text">
     <p style="color:var(--accent)">Curriculum Vitae</p>
     <h1>Lukmanul Hakim</h1>
-    <h2>Admin Profesional</h2>
+    <h2>Admin </h2>
     <p>
       Admin yang terbiasa mengelola data, dokumen, laporan administrasi,
       serta mendukung operasional harian agar berjalan rapi, akurat,
@@ -181,17 +226,18 @@ footer{
 <section>
   <h3 class="section-title">Portfolio Konten</h3>
 
-  <div class="content-card">
-    <img src="https://via.placeholder.com/300x400" alt="">
-    <div>
+<section>
+  <h3 class="section-title">Portfolio Konten YouTube</h3>
+
+  <div class="yt-card"
+       style="background-image:url('https://img.youtube.com/vi/j_Rq4JSmtdU/maxresdefault.jpg')">
+
+    <div class="yt-overlay">
       <h4>Kisah Attila – Si Cambuk Tuhan (2025)</h4>
-      <p style="color:var(--sub)">
-        Konten sejarah dengan visual AI, riset narasi, dan eksekusi rapi.
-      </p>
+      <p>Konten sejarah dengan visual AI dan narasi sinematik.</p>
       <a href="https://youtube.com/shorts/j_Rq4JSmtdU" target="_blank">
-        Lihat Konten ↗️
+        Tonton di YouTube ↗️
       </a>
-    </div>
   </div>
 </section>
 
@@ -205,11 +251,12 @@ footer{
 </section>
 
 <footer>
-  © 2025 Lukmanul Hakim — Admin Profesional
+  © 2025 Lukmanul Hakim — Admin 
 </footer>
 
 </div>
 
 </body>
 </html>
+
 
