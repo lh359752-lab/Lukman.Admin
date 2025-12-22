@@ -82,7 +82,32 @@ nav a:hover {
     max-width: 540px;
     color: var(--subtext);
 }
+.hero {
+    gap: 60px;
+}
 
+.hero-content {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 320px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE HERO FOTO */
+@media(max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 220px;
+    }
+}
 /* BUTTON */
 .btn {
     display: inline-block;
@@ -234,7 +259,7 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-    <div>
+    <div class="hero-content">
         <p style="color:var(--accent)">Hi, my name is</p>
         <h1>Lukmanul Hakim.</h1>
         <h2>I work as an Admin.</h2>
@@ -245,8 +270,11 @@ footer {
         </p>
         <a href="#contact" class="btn">Contact Me</a>
     </div>
-</section>
 
+    <div class="hero-image">
+        <img src="images/1a614248-3c35-4bda-bf5b-4f09e92c2978.jpg" alt="Foto Lukmanul Hakim">
+    </div>
+</section>
 <!-- ABOUT -->
 <section id="about" class="about">
     <h3 class="section-title">About Me</h3>
@@ -385,6 +413,7 @@ loadQuestion();
 </body>
 
 </html>
+
 
 
 
