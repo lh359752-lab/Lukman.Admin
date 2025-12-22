@@ -6,417 +6,232 @@
 <title>Lukmanul Hakim | Admin</title>
 
 <style>
-:root {--bg: #f4f7fb;
-    --card: #ffffff;
-    --text: #1f2937;
-    --subtext: #4b5563;
-    --accent: #0f766e;}
-
-	* {
-    box-sizing: border-box;
+:root{
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --text:#1f2937;
+  --subtext:#4b5563;
+  --accent:#0f766e;
 }
 
-body {
-    margin: 0;
-    font-family: "Segoe UI", Tahoma, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:"Segoe UI",Tahoma,sans-serif;
+  background:var(--bg);
+  color:var(--text);
 }
 
 /* NAVBAR */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(244, 247, 251, 0.9);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid #e5e7eb;
-    z-index: 1000;
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(244,247,251,.95);
+  border-bottom:1px solid #e5e7eb;
+  z-index:1000;
 }
-
-.nav-inner {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
+.nav-inner{
+  max-width:1100px;
+  margin:auto;
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
 }
-
-nav a {
-    color: var(--text);
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 14px;
+nav a{
+  text-decoration:none;
+  color:var(--text);
+  margin-left:25px;
 }
+nav a:hover{color:var(--accent)}
 
-nav a:hover {
-    color: var(--accent);
-}
-
-/* CONTAINER */
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 0 40px;
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 40px;
 }
 
 /* HERO */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-	justify-content: Space-between; /* INI PENTING */
-	40px; 
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  gap:80px;
+}
+.hero-content{flex:1}
+.hero-image img{
+  width:320px;
+  border-radius:14px;
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
-.hero h1 {
-    font-size: 56px;
-    margin: 10px 0;
-}
+.hero h1{font-size:56px;margin:10px 0}
+.hero h2{font-size:34px;color:var(--subtext)}
+.hero p{max-width:520px;color:var(--subtext)}
 
-.hero h2 {
-    font-size: 36px;
-    color: var(--subtext);
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 26px;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  text-decoration:none;
+  border-radius:5px;
 }
+.btn:hover{background:rgba(15,118,110,.08)}
 
-.hero p {
-    max-width: 540px;
-    color: var(--subtext);
-}
-.hero {
-    gap: 60px;
-}
-
-.hero-content {
-    flex: 1;
-}
-
-.hero-image img {
-    width: 320px;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-/* RESPONSIVE HERO FOTO */
-@media(max-width: 768px) {
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .hero-image img {
-        width: 220px;
-    }
-}
-/* BUTTON */
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 14px;
-    border-radius: 4px;
-}
-
-.btn:hover {
-    background: rgba(15, 118, 110, 0.08);
-}
-
-/* SECTION */
-section {
-    padding: 100px 0;
-}
-
-.section-title {
-    font-size: 26px;
-    margin-bottom: 30px;
-}
-
-/* ABOUT */
-.about p {
-    max-width: 700px;
-    color: var(--subtext);
-}
+section{padding:100px 0}
+.section-title{font-size:26px;margin-bottom:30px}
 
 /* SKILLS */
-.skills ul {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 1fr));
-    gap: 10px;
-    list-style: none;
-    padding: 0;
+.skills ul{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(160px,1fr));
+  gap:12px;
+  list-style:none;
+  padding:0;
+}
+.skills li::before{
+  content:"▹";
+  color:var(--accent);
+  margin-right:10px;
 }
 
-.skills li::before {
-    content: "▹";
-    color: var(--accent);
-    margin-right: 10px;
+/* CONTENT */
+.content-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+  gap:30px;
 }
-
-/* CONTACT */
-.contact p {
-    max-width: 500px;
-    color: var(--subtext);
+.content-card{
+  background:var(--card);
+  border:1px solid #e5e7eb;
+  padding:20px;
+  border-radius:10px;
+  display:flex;
+  gap:20px;
+}
+.content-card img{
+  width:120px;
+  height:160px;
+  object-fit:cover;
+  border-radius:6px;
 }
 
 /* FOOTER */
-footer {
-    text-align: center;
-    padding: 40px 0;
-    color: var(--subtext);
-    font-size: 13px;
+footer{
+  text-align:center;
+  padding:40px 0;
+  color:var(--subtext);
+  font-size:13px;
 }
 
 /* RESPONSIVE */
-@media(max-width: 768px) {
-    .hero h1 { font-size: 42px; }
-    .hero h2 { font-size: 28px; }
-}
-/* CONTENT GRID */
-.content-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-    gap: 30px;
-}
-
-.content-card {
-    background: var(--card);
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    gap: 20px;
-    border: 1px solid #e5e7eb;
-}
-
-.content-card img {
-    width: 120px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-.content-info h4 {
-    margin: 0 0 10px;
-    font-size: 18px;
-}
-
-.content-info p {
-    margin: 0 0 15px;
-    font-size: 14px;
-    color: var(--subtext);
-}
-
-.content-info a {
-    color: #b91c1c;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.content-info a:hover {
-    text-decoration: underline;
-}
-
-/* RESPONSIVE CARD */
-@media(max-width: 600px) {
-    .content-card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .content-card img {
-        width: 100%;
-        height: auto;
-    }
-}
-.game-box {
-    background: var(--card);
-    border: 1px solid #e5e7eb;
-    padding: 30px;
-    border-radius: 8px;
-    max-width: 500px;
+@media(max-width:768px){
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+  .hero-image img{width:220px}
+  .hero h1{font-size:40px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-    <div class="nav-inner">
-        <div><strong>Lukman</strong></div>
-        <div>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </div>
+  <div class="nav-inner">
+    <strong>Lukman</strong>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#content">Content</a>
+      <a href="#contact">Contact</a>
     </div>
+  </div>
 </nav>
 
 <div class="container">
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-content">
-        <p style="color:var(--accent)">Hi, my name is</p>
-        <h1>Lukmanul Hakim.</h1>
-        <h2>I work as an Admin.</h2>
-        <p>
-            Saya adalah seorang admin yang terbiasa mengelola data,
-            dokumen, laporan administrasi, serta mendukung operasional
-            harian agar berjalan rapi dan efisien.
-        </p>
-        <a href="#contact" class="btn">Contact Me</a>
-    </div>
-
-    <div class="hero-image">
-        <img src="images/1a614248-3c35-4bda-bf5b-4f09e92c2978.jpg" alt="Foto Lukmanul Hakim">
-    </div>
-</section>
-<!-- ABOUT -->
-<section id="about" class="about">
-    <h3 class="section-title">About Me</h3>
+  <div class="hero-content">
+    <p style="color:var(--accent)">Hi, my name is</p>
+    <h1>Lukmanul Hakim.</h1>
+    <h2>I work as an Admin.</h2>
     <p>
-        Saya memiliki ketelitian tinggi, kemampuan mengatur dokumen,
-        serta terbiasa bekerja dengan sistem administrasi digital.
+      Saya adalah seorang admin yang terbiasa mengelola data,
+      dokumen, laporan administrasi, serta mendukung operasional
+      harian agar berjalan rapi dan efisien.
     </p>
+    <a href="#contact" class="btn">Contact Me</a>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/foto.jpg" alt="Foto Lukmanul Hakim">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h3 class="section-title">About Me</h3>
+  <p style="max-width:700px;color:var(--subtext)">
+    Saya memiliki ketelitian tinggi, kemampuan mengatur dokumen,
+    serta terbiasa bekerja dengan sistem administrasi digital.
+  </p>
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="skills">
-    <h3 class="section-title">Skills</h3>
-    <ul>
-        <li>Data Entry</li>
-        <li>Document Management</li>
-        <li>Microsoft Excel</li>
-        <li>Microsoft Word</li>
-        <li>Administrasi Kantor</li>
-        <li>Arsip Digital</li>
-    </ul>
+  <h3 class="section-title">Skills</h3>
+  <ul>
+    <li>Data Entry</li>
+    <li>Document Management</li>
+    <li>Microsoft Excel</li>
+    <li>Microsoft Word</li>
+    <li>Administrasi Kantor</li>
+    <li>Arsip Digital</li>
+  </ul>
 </section>
-<!-- ADMIN DATA GAME -->
-<section id="admin-game">
-    <h3 class="section-title">Admin Data Accuracy Test</h3>
-    <p style="color:var(--subtext); max-width:600px">
-        Simulasi ringan pekerjaan admin: periksa data di bawah
-        dan tentukan apakah data tersebut VALID atau SALAH.
-    </p>
 
-    <div class="game-box">
-        <h4 id="question"></h4>
-
-        <div style="margin:20px 0">
-            <button class="btn" onclick="answer(true)">VALID</button>
-            <button class="btn" onclick="answer(false)" style="margin-left:10px">
-                SALAH
-            </button>
-        </div>
-
-        <p>Skor: <strong><span id="adminScore">0</span></strong></p>
-        <p id="feedback" style="color:var(--accent)"></p>
-
-        <button onclick="nextQuestion()" class="btn" style="margin-top:15px">
-            Soal Berikutnya
-        </button>
-    </div>
-</section>
-	<!-- DIGITAL CONTENT -->
+<!-- CONTENT -->
 <section id="content">
-    <h3 class="section-title">Digital Content</h3>
+  <h3 class="section-title">Digital Content</h3>
 
-    <div class="content-grid">
-
-        <div class="content-card">
-            <img src="https://via.placeholder.com/300x400" alt="">
-            <div class="content-info">
-                <h4>KISAH ATTILLA: Si Cambuk Tuhan, Sangar Dimedan Perang Tumbang Di Kasur(2025)</h4>
-                <p>
-                    Tonton/download video sejarah dengan latar AI yang menarik.
-                </p>
-                <a href="https://youtube.com/shorts/j_Rq4JSmtdU?si=LndtgPKDte645jpA" target="_blank">
-                    Tonton Sekarang ↗
-                </a>
-            </div>
-        </div>      
+  <div class="content-grid">
+    <div class="content-card">
+      <img src="https://via.placeholder.com/300x400" alt="">
+      <div>
+        <h4>Kisah Attila – Si Cambuk Tuhan (2025)</h4>
+        <p style="color:var(--subtext)">
+          Video sejarah dengan visual AI yang menarik.
+        </p>
+        <a href="https://youtube.com/shorts/j_Rq4JSmtdU" target="_blank">
+          Tonton Sekarang ↗
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- CONTACT -->
-<section id="contact" class="contact">
-    <h3 class="section-title">Contact</h3>
-    <p>
-        Jika ingin bekerja sama atau membutuhkan admin yang rapi dan
-        bertanggung jawab, silakan hubungi saya.
-    </p>
-    <a href="mailto:lh359752@gmail.com" class="btn">Send Email</a>
+<section id="contact">
+  <h3 class="section-title">Contact</h3>
+  <p style="color:var(--subtext)">
+    Jika ingin bekerja sama, silakan hubungi saya.
+  </p>
+  <a href="mailto:lh359752@gmail.com" class="btn">Send Email</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    © 2025 Lukmanul Hakim — Admin
+  © 2025 Lukmanul Hakim — Admin
 </footer>
 
 </div>
-<script>
-const questions = [
-    {
-        text: "Tanggal laporan: 31 Februari 2024",
-        correct: false
-    },
-    {
-        text: "Nomor invoice: INV-2025-0045",
-        correct: true
-    },
-    {
-        text: "Email: admin@perusahaan",
-        correct: false
-    },
-    {
-        text: "Total pembayaran: Rp 1.500.000",
-        correct: true
-    }
-];
-
-let current = 0;
-let score = 0;
-
-function loadQuestion() {
-    document.getElementById("question").textContent =
-        questions[current].text;
-    document.getElementById("feedback").textContent = "";
-}
-
-function answer(userAnswer) {
-    if (userAnswer === questions[current].correct) {
-        score++;
-        document.getElementById("feedback").textContent = "✔ Benar";
-    } else {
-        document.getElementById("feedback").textContent = "✖ Salah";
-    }
-
-    document.getElementById("adminScore").textContent = score;
-}
-
-function nextQuestion() {
-    current++;
-    if (current >= questions.length) {
-        alert("Tes selesai! Skor akhir: " + score);
-        current = 0;
-        score = 0;
-        document.getElementById("adminScore").textContent = score;
-    }
-    loadQuestion();
-}
-
-loadQuestion();
-</script>
 </body>
-
 </html>
-
-
 
 
 
