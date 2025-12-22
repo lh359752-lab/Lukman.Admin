@@ -3,107 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lukmanul Hakim | Admin</title>
+
+<title>Lukmanul Hakim | Admin Profesional</title>
+<meta name="description" content="CV Online Lukmanul Hakim — Admin profesional berpengalaman dalam data entry, dokumentasi, dan administrasi digital.">
+<meta name="keywords" content="Admin, Data Entry, Administrasi, CV Admin, Lukmanul Hakim">
 
 <style>
 :root{
   --bg:#f4f7fb;
   --card:#ffffff;
   --text:#1f2937;
-  --subtext:#4b5563;
+  --sub:#4b5563;
   --accent:#0f766e;
 }
 
 *{box-sizing:border-box}
-
 body{
   margin:0;
   font-family:"Segoe UI",Tahoma,sans-serif;
   background:var(--bg);
   color:var(--text);
+  line-height:1.6;
 }
 
-/* NAVBAR */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:rgba(244,247,251,.95);
-  border-bottom:1px solid #e5e7eb;
-  z-index:1000;
-}
-.nav-inner{
-  max-width:1100px;
-  margin:auto;
-  padding:20px 40px;
-  display:flex;
-  justify-content:space-between;
-}
-nav a{
-  text-decoration:none;
-  color:var(--text);
-  margin-left:25px;
-}
-nav a:hover{color:var(--accent)}
-
+/* LAYOUT */
 .container{
-  max-width:1100px;
+  max-width:1000px;
   margin:auto;
-  padding:0 40px;
+  padding:80px 30px;
 }
 
-/* HERO */
+/* HEADER / HERO */
 .hero{
-  min-height:100vh;
   display:flex;
   align-items:center;
-  gap:80px;
+  gap:60px;
+  margin-bottom:80px;
 }
-.hero-content{flex:1}
-.hero-image img{
-  width:320px;
-  border-radius:14px;
+.hero-text{flex:1}
+.hero-text h1{
+  font-size:48px;
+  margin:0;
+}
+.hero-text h2{
+  font-size:24px;
+  color:var(--sub);
+  font-weight:500;
+}
+.hero-text p{
+  max-width:520px;
+  color:var(--sub);
+}
+.hero-photo img{
+  width:260px;
+  border-radius:16px;
+  object-fit:cover;
   box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
-.hero h1{font-size:56px;margin:10px 0}
-.hero h2{font-size:34px;color:var(--subtext)}
-.hero p{max-width:520px;color:var(--subtext)}
-
-.btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:12px 26px;
-  border:1px solid var(--accent);
-  color:var(--accent);
-  text-decoration:none;
-  border-radius:5px;
+/* SECTION */
+section{margin-bottom:70px}
+.section-title{
+  font-size:22px;
+  margin-bottom:20px;
+  border-left:4px solid var(--accent);
+  padding-left:12px;
 }
-.btn:hover{background:rgba(15,118,110,.08)}
-
-section{padding:100px 0}
-.section-title{font-size:26px;margin-bottom:30px}
 
 /* SKILLS */
 .skills ul{
   display:grid;
   grid-template-columns:repeat(2,minmax(160px,1fr));
-  gap:12px;
+  gap:10px;
   list-style:none;
   padding:0;
 }
 .skills li::before{
   content:"▹";
   color:var(--accent);
-  margin-right:10px;
+  margin-right:8px;
 }
 
 /* CONTENT */
-.content-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
-  gap:30px;
-}
 .content-card{
   background:var(--card);
   border:1px solid #e5e7eb;
@@ -113,18 +94,30 @@ section{padding:100px 0}
   gap:20px;
 }
 .content-card img{
-  width:120px;
-  height:160px;
+  width:110px;
+  height:150px;
   object-fit:cover;
   border-radius:6px;
 }
 
+/* BUTTON */
+.btn{
+  display:inline-block;
+  padding:10px 22px;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  text-decoration:none;
+  border-radius:4px;
+  font-size:14px;
+}
+.btn:hover{background:rgba(15,118,110,.08)}
+
 /* FOOTER */
 footer{
   text-align:center;
-  padding:40px 0;
-  color:var(--subtext);
+  color:var(--sub);
   font-size:13px;
+  margin-top:60px;
 }
 
 /* RESPONSIVE */
@@ -133,62 +126,50 @@ footer{
     flex-direction:column-reverse;
     text-align:center;
   }
-  .hero-image img{width:220px}
-  .hero h1{font-size:40px}
+  .hero-photo img{width:200px}
+  .hero-text h1{font-size:36px}
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <strong>Lukman</strong>
-    <div>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#content">Content</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
-
 <div class="container">
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <p style="color:var(--accent)">Hi, my name is</p>
-    <h1>Lukmanul Hakim.</h1>
-    <h2>I work as an Admin.</h2>
+<header class="hero">
+  <div class="hero-text">
+    <p style="color:var(--accent)">Curriculum Vitae</p>
+    <h1>Lukmanul Hakim</h1>
+    <h2>Admin Profesional</h2>
     <p>
-      Saya adalah seorang admin yang terbiasa mengelola data,
-      dokumen, laporan administrasi, serta mendukung operasional
-      harian agar berjalan rapi dan efisien.
+      Admin yang terbiasa mengelola data, dokumen, laporan administrasi,
+      serta mendukung operasional harian agar berjalan rapi, akurat,
+      dan efisien.
     </p>
-    <a href="#contact" class="btn">Contact Me</a>
+    <a href="#contact" class="btn">Contact</a>
   </div>
 
-  <div class="hero-image">
+  <div class="hero-photo">
     <img src="foto.jpg" alt="Foto Lukmanul Hakim">
   </div>
-</section>
+</header>
 
 <!-- ABOUT -->
-<section id="about">
-  <h3 class="section-title">About Me</h3>
-  <p style="max-width:700px;color:var(--subtext)">
-    Saya memiliki ketelitian tinggi, kemampuan mengatur dokumen,
-    serta terbiasa bekerja dengan sistem administrasi digital.
+<section>
+  <h3 class="section-title">Profil Singkat</h3>
+  <p style="max-width:700px;color:var(--sub)">
+    Saya memiliki ketelitian tinggi, mampu bekerja dengan sistem administrasi
+    digital, serta terbiasa menjaga kerapihan data dan dokumen penting.
   </p>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="skills">
-  <h3 class="section-title">Skills</h3>
+<section class="skills">
+  <h3 class="section-title">Keahlian</h3>
   <ul>
-    <li>Data Entry</li>
-    <li>Document Management</li>
+    <li>Data Entry & Validasi</li>
+    <li>Manajemen Dokumen</li>
     <li>Microsoft Excel</li>
     <li>Microsoft Word</li>
     <li>Administrasi Kantor</li>
@@ -196,43 +177,39 @@ footer{
   </ul>
 </section>
 
-<!-- CONTENT -->
-<section id="content">
-  <h3 class="section-title">Digital Content</h3>
+<!-- PORTFOLIO -->
+<section>
+  <h3 class="section-title">Portfolio Konten</h3>
 
-  <div class="content-grid">
-    <div class="content-card">
-      <img src="https://via.placeholder.com/300x400" alt="">
-      <div>
-        <h4>Kisah Attila – Si Cambuk Tuhan (2025)</h4>
-        <p style="color:var(--subtext)">
-          Video sejarah dengan visual AI yang menarik.
-        </p>
-        <a href="https://youtube.com/shorts/j_Rq4JSmtdU" target="_blank">
-          Tonton Sekarang ↗
-        </a>
-      </div>
+  <div class="content-card">
+    <img src="https://via.placeholder.com/300x400" alt="">
+    <div>
+      <h4>Kisah Attila – Si Cambuk Tuhan (2025)</h4>
+      <p style="color:var(--sub)">
+        Konten sejarah dengan visual AI, riset narasi, dan eksekusi rapi.
+      </p>
+      <a href="https://youtube.com/shorts/j_Rq4JSmtdU" target="_blank">
+        Lihat Konten ↗️
+      </a>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h3 class="section-title">Contact</h3>
-  <p style="color:var(--subtext)">
-    Jika ingin bekerja sama, silakan hubungi saya.
+  <h3 class="section-title">Kontak</h3>
+  <p style="color:var(--sub)">
+    Tertarik bekerja sama atau membutuhkan admin yang rapi dan bertanggung jawab?
   </p>
-  <a href="mailto:lh359752@gmail.com" class="btn">Send Email</a>
+  <a href="mailto:lh359752@gmail.com" class="btn">Email Saya</a>
 </section>
 
 <footer>
-  © 2025 Lukmanul Hakim — Admin
+  © 2025 Lukmanul Hakim — Admin Profesional
 </footer>
 
 </div>
+
 </body>
 </html>
-
-
-
 
